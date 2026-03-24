@@ -1,0 +1,115 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Market Tanzania</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>🚗 Car Market Tanzania</h1>
+
+    <input type="text" id="searchInput" placeholder="Tafuta gari..." onkeyup="searchCars()">
+
+    <div class="container">
+
+        <div class="car">
+            <img src="https://via.placeholder.com/300" />
+            <h2>Toyota Mark X</h2>
+            <p>Year: 2010</p>
+            <p>Price: Tsh 18,000,000</p>
+            <a href="tel:+255712345678"><button>Call Seller</button></a>
+        </div>
+
+        <div class="car">
+            <img src="https://via.placeholder.com/300" />
+            <h2>Nissan X-Trail</h2>
+            <p>Year: 2015</p>
+            <p>Price: Tsh 22,000,000</p>
+            <a href="https://wa.me/255712345678"><button>WhatsApp</button></a>
+        </div>
+
+        <div class="car">
+            <img src="https://via.placeholder.com/300" />
+            <h2>Mazda CX-5</h2>
+            <p>Year: 2018</p>
+            <p>Price: Tsh 28,000,000</p>
+            <a href="tel:+255712345679"><button>Call Seller</button></a>
+        </div>
+
+        <div class="car">
+            <img src="https://via.placeholder.com/300" />
+            <h2>Honda CR-V</h2>
+            <p>Year: 2017</p>
+            <p>Price: Tsh 26,000,000</p>
+            <a href="https://wa.me/255712345679"><button>WhatsApp</button></a>
+        </div>
+
+        <div class="car">
+            <img src="https://via.placeholder.com/300" />
+            <h2>Toyota Prado</h2>
+            <p>Year: 2016</p>
+            <p>Price: Tsh 60,000,000</p>
+            <a href="tel:+255712345680"><button>Call Seller</button></a>
+        </div>
+
+        <div class="car">
+            <img src="https://via.placeholder.com/300" />
+            <h2>Mitsubishi Pajero</h2>
+            <p>Year: 2014</p>
+            <p>Price: Tsh 55,000,000</p>
+            <a href="https://wa.me/255712345680"><button>WhatsApp</button></a>
+        </div>
+
+        <div class="car">
+            <img src="https://via.placeholder.com/300" />
+            <h2>BMW X5</h2>
+            <p>Year: 2019</p>
+            <p>Price: Tsh 120,000,000</p>
+            <a href="tel:+255712345681"><button>Call Seller</button></a>
+        </div>
+
+        <div class="car">
+            <img src="https://via.placeholder.com/300" />
+            <h2>Mercedes GLE</h2>
+            <p>Year: 2018</p>
+            <p>Price: Tsh 130,000,000</p>
+            <a href="https://wa.me/255712345681"><button>WhatsApp</button></a>
+        </div>
+
+        <div class="car">
+            <img src="https://via.placeholder.com/300" />
+            <h2>Honda Fit</h2>
+            <p>Year: 2013</p>
+            <p>Price: Tsh 12,000,000</p>
+            <a href="tel:+255712345682"><button>Call Seller</button></a>
+        </div>
+
+        <div class="car">
+            <img src="https://via.placeholder.com/300" />
+            <h2>Toyota Vitz</h2>
+            <p>Year: 2015</p>
+            <p>Price: Tsh 14,000,000</p>
+            <a href="https://wa.me/255712345682"><button>WhatsApp</button></a>
+        </div>
+
+    </div>
+
+    <script>
+    function searchCars() {
+        let input = document.getElementById('searchInput').value.toLowerCase();
+        let cars = document.getElementsByClassName('car');
+        for (let i = 0; i < cars.length; i++) {
+            let title = cars[i].getElementsByTagName('h2')[0].innerText.toLowerCase();
+            if(title.includes(input)) {
+                cars[i].style.display = "";
+            } else {
+                cars[i].style.display = "none";
+            }
+        }
+    }
+    </script>
+
+</body>
+</html>
