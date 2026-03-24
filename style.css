@@ -91,5 +91,5 @@ button:hover {
   }
   
   .carousel-image.active {
-    opacity: 10;
+    opacity: 1;
   }
