@@ -31,19 +31,3 @@ showImage(current);
 
 // auto slide
 setInterval(nextImage, 3000);
-
-
-
-function filterCars() {
-    const input = document.getElementById('searchInput').value.toLowerCase();
-    const cards = document.querySelectorAll('.car-card');
-  
-    cards.forEach(card => {
-      const title = card.querySelector('h3').innerText.toLowerCase();
-      if(title.includes(input)) {
-        card.style.display = "block";
-      } else {
-        card.style.display = "none";
-      }
-    });
-  }
