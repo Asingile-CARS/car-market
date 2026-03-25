@@ -12,3 +12,17 @@ images[current].classList.add('active');
 
 // change image every 3 seconds
 setInterval(showNextImage, 7000);
+
+function filterCars() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const cards = document.querySelectorAll('.car-card');
+  
+    cards.forEach(card => {
+      const title = card.querySelector('h3').innerText.toLowerCase();
+      if(title.includes(input)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
