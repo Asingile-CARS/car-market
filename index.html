@@ -15,11 +15,27 @@
     <input type="text" id="searchInput" placeholder="Tafuta gari..." onkeyup="searchCars()">
 
 <!-- SLIDESHOW -->
-    <div class="carousel">
-        <img src="images/cars.jpg" alt="cars" class="carousel-image">
-        <img src="images/Nissan.jpg" alt="Nissan X-Trail" class="carousel-image">
-        <img src="images/cars.jpg" alt="cars" class="carousel-image">
+<div class="carousel">
+
+    <!-- Images -->
+    <img src="images/Nissan.jpg" class="carousel-image">
+    <img src="images/cars.jpg" class="carousel-image">
+    <img src="images/altezza1.jpg" class="carousel-image">
+    <img src="images/altezza2.jpg" class="carousel-image">
+
+    <!-- Arrows -->
+    <button class="prev" onclick="prevImage()">❮</button>
+    <button class="next" onclick="nextImage()">❯</button>
+  
+    <!-- Dots -->
+    <div class="dots">
+      <span class="dot" onclick="setImage(0)"></span>
+      <span class="dot" onclick="setImage(1)"></span>
+      <span class="dot" onclick="setImage(2)"></span>
+      <span class="dot" onclick="setImage(3)"></span>
     </div>
+  
+  </div>
 
 
     <script src="script.js"></script>
